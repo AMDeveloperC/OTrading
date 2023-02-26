@@ -11,8 +11,6 @@ class ReservationPricing(OnlineTrading):
         self.buy()
         self.approximation = math.sqrt(self.phi)
 
-    # Quest'algoritmo sceglie il reservation pricing a caso in un intervallo suddiviso in potenze di due
-    # k deve essere un intero positivo maggiore o uguale di zero, quindi lo scegli come logaritmo
     def randomized_reservation_pricing(self, epsilon = 0.45):
         self.positive_integer = math.log(self.phi, 1 + epsilon)
         i = random.randrange(0, int(self.positive_integer))
